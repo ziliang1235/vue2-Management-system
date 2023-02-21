@@ -1,19 +1,24 @@
 <template>
-  <div id="app">
-    <home/>
+  <div>
+    1231111
   </div>
 </template>
 
 <script>
-import home from './view/home/home'
 export default {
-  name: 'App',
+  name: "home",
+  data(){
+
+  },
+  mounted() {
+
+  },
   components:{
-    home
+
   }
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
