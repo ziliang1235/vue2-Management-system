@@ -5,6 +5,24 @@
 const path = require('path')
 
 module.exports = {
+  devServer: {
+    open: true,
+    public: 'http://192.168.1.1:8080',
+    port: 8080,
+    https: false,
+    proxy: {
+      '/third': {
+        // 保持默认
+        target: 'http://192.168.1.1:8080',
+        ws: false,
+        secure: false,
+        changOrigin: true, // 允许跨域
+        pathRewrite: {
+          '^/third': '' // 请求的时候使用这个api就可以
+        }
+      }
+    }
+  },
   dev: {
 
     // Paths
@@ -20,7 +38,7 @@ module.exports = {
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
+
     /**
      * Source Maps
      */

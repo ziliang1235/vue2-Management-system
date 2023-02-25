@@ -1,15 +1,20 @@
 <template>
   <div id="app">
-    <home/>
+    <home></home>
   </div>
 </template>
 
 <script>
 import home from './view/home/home'
 export default {
-  name: 'App',
-  components:{
-    home
+    data() {
+      return{
+
+      }
+    },
+
+    components:{
+        home
   }
 }
 </script>
